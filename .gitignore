@@ -1,0 +1,28 @@
+# Godot
+.import/
+*.translation.*
+*.cfg.bak
+*.log
+
+# Builds
+build/
+exports/*.apk
+exports/*.aab
+*.pck
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.sublime-project
+
+# Save games (user data)
+user://*.json
+
+# Engine binary (tool, not source)
+godot/
+godot.zip
+*.zip
