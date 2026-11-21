@@ -1,0 +1,56 @@
+; Project configuration for BHARAT: BEYOND THE STREETS
+; Original Indian open-world 3D Android game
+; Engine: Godot 4.7.2-stable
+
+config/
+name = "Bharat Beyond The Streets"
+description = "Original Indian open-world 3D city life simulation for Android"
+author = "Autonomous Game Studio"
+version_major = 1
+version_minor = 0
+version_patch = 0
+
+application/
+run/main_scene = "res://scenes/Main.tscn"
+config/name = "Bharat Beyond The Streets"
+
+rendering/
+renderer/rendering_method = "gl_compatibility"
+
+interface/
+editor/main_scene = "res://scenes/Main.tscn"
+editor/imports/assetlib_url = "https://godotengine.org/asset-library/asset"
+
+audio/
+driver/mix_rate = 48000
+driver/latency = 10
+
+android/
+preset/compress_textures = true
+
+[autoload]
+GameManager = "res://scripts/GameManager.gd"
+World = "res://scripts/World.gd"
+UI = "res://scripts/UI.gd"
+
+[input]
+jump = {
+	"deadzone": 0.0,
+	"events": [
+		Object(InputEventKey,"device":-1,"key":32,"pressed":true,"key_label":" "),
+		Object(InputEventJoypadButton,"device":-1,"button_index":0,"pressed":true,"pressure":1.0)
+	]
+}
+sprint = {
+	"deadzone": 0.0,
+	"events": [
+		Object(InputEventKey,"device":-1,"key":340,"pressed":true,"key_label":"Shift")
+	]
+}
+interact = {
+	"deadzone": 0.0,
+	"events": [
+		Object(InputEventKey,"device":-1,"key":26,"pressed":true,"key_label":"E"),
+		Object(InputEventJoypadButton,"device":-1,"button_index":1,"pressed":true,"pressure":1.0)
+	]
+}
